@@ -1,0 +1,339 @@
+/* ##### G R U N D E I N S T E L L U N G ##### */
+
+
+/*/ Grund: Schriften benennen und verlinken/*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Sans/Roboto-Light.ttf") format('ttf');
+}
+@font-face {
+    font-family: 'Inknut';
+    src: url("../fonts/Serif/InknutAntiqua-Regular.woff") format('woff');
+}
+@font-face {
+    font-family: 'PTSerif';
+    src: url("../fonts/Serif/PT_Serif-Web-Regular.ttf") format('ttf');
+}
+
+/* Grund: Margin für alle Elemente rausnehmen */
+
+* {
+    margin: 0rem;
+    /*
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+*/
+}
+::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+}
+
+/* CSS Übernommen GRID: Pape
+
+
+
+/* ########## L A Y O U T ############## */
+
+
+/* Layout:body container in die Mitte */
+
+body {
+    display: flex;
+    width:100vw;
+}
+
+/* Layout: Container:Max-Width    */
+
+
+/*#container {*/
+
+
+/*    max-width: 1400px;*/
+
+
+}
+
+/* Layout: Zeilen für den Container mit auto_höhe + 1rem Abstand zwischeneinander */
+#container {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+/* Layout: Nav positionieren*/
+
+/*
+nav {
+    grid-column-start: 1;
+    grid-column-end: span 12;
+}
+*/
+
+/* Layout: Artikel im Container positionieren */
+article {
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1rem;
+    padding:2rem;
+    padding-top: 9rem;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    font-family: "PTSerif";
+    font-size: 70px;
+    letter-spacing: 0.02rem;
+    -webkit-font-smoothing: antialiased;
+    overflow: auto;
+}
+
+/* Layout: Artikel-Grid und nav-Grid festlegen */
+
+/*
+article,
+nav{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: rem;
+    padding: 1rem;
+    padding-top: 10rem;
+}
+*/
+
+/* Layout: Artikel-Header positionieren */
+article header {
+    grid-column-start: 1;
+    grid-column-end: 6;
+   
+    
+}
+
+/* Layout: Artikel-Textinhalte positionieren */
+article p {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    margin: 2rem 0 .5rem 0;
+    font-size:30px;
+    line-height: 37px;
+    font-family: "PTSerif";
+    hyphens: auto;
+}
+
+
+
+
+
+/* Layout: Marginalien in die letzten 2 Spalten*/
+article aside {
+   
+    grid-column-start: 5;
+    grid-column-end: 13;
+    margin: 0 0 -4rem 0;
+    text-align: left;
+    font-size: .7em;
+}
+
+aside figure {
+    margin: 0;
+    grid-column-start:5;
+    grid-column-end: 12;
+    margin: 0 0 -4rem 0;
+
+}
+figure .gruen{
+    width: 100%;
+    height: auto;
+    display:block;
+    float:right;
+
+}
+
+/* Layout: Artikel Unterüberschrift im Text positioneren */
+article h4 {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    cursor: context-menu;
+}
+
+/* Layout: Nav Liste positionieren im header-Grid /*/
+
+/* Layout-Korrektur: Aside Bilder ohne Margin */
+
+.Kopf {
+    width: 100%;
+    height: 11vh;
+    position: fixed;
+    overflow: hidden;
+    font-family: "Roboto";
+    font-size: 60px;
+    display: flex;
+    display:row;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    background-color: white;
+}
+Zahl {
+   float:right;
+    grid-column-start: 12;
+    grid-column-end: 12;
+
+}
+.links {
+    float: left;
+     display: flex;
+    display:row;
+}
+.rechts {
+     display: flex;
+    display:row;
+    float: right;
+}
+ul {
+    width: 100vw;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    list-style: none;
+    padding-left: 0;
+}
+.Zahl {
+    width: 100%;
+    grid-column-start: 12;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: right;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.Projekt:hover + .Zahlstart {
+  text-decoration: underline;  
+}
+
+img {
+    display:none;
+}
+
+
+
+span:hover + img {
+    
+    display: block;
+    margin-left: 42.5rem;
+    margin-right: 200px;
+    margin-top: -50px;
+    width: 50%;
+    position: absolute;
+    z-index: 3;
+}
+
+span:hover + .about{
+    display: block;
+    margin-left: 600px;
+    margin-right: 200px;
+    margin-top: -50px;
+    width: 20%;
+    position: absolute;
+    z-index: 3;
+}
+
+span:hover + .rhodesans{
+    display: block;
+    margin-left: 39rem;
+    margin-right: 200px;
+   margin-top: -40rem;
+    width: 50%;
+    position: absolute;
+    z-index: 3;
+}
+
+span:hover + .baskalicar{
+    display: block;
+    margin-left: 42.5rem;
+    margin-right: 200px;
+   margin-top: -40rem;
+    width: 50%;
+    position: absolute;
+    z-index: 3;
+}
+
+.headline {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+
+}
+
+.Zahlheadline {
+    text-align: right;
+    grid-column-start: 12;
+    grid-column-end: 12;
+    text-decoration: underline;
+     margin-bottom: 2rem;
+    
+}
+
+.Zahlstart {
+    grid-column-start: 12;
+    grid-column-end: 12;
+    padding-right: 4rem;
+}
+
+.subheadline {
+    grid-column-start: 5;
+    grid-column-end: 13;
+    font-size:34px;
+    line-height: 42px;
+    font-family: "PTSerif";
+    hyphens: auto;
+    margin-top: 6rem;
+    
+}
+
+.gruenstaedtisch {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.caption {
+    grid-column-start: 10;
+    grid-column-end: 12;
+    margin: 2rem 0 .5rem 0;
+    font-size:20px;
+    line-height: 25px;
+    font-family: "PTSerif";
+    hyphens: auto;
+    color:green;
+}
+
+figcaption {
+    grid-column-start: 5;
+    padding-top: 37rem;
+    text-align:right;
+    font-size:30px;
+    
+}
+
+.info {
+    font-family: "Roboto";
+    font-size: 35px;
+}
+
+.Fuss {
+    font-family: "Roboto";
+    font-size: 60px;
+   padding-top: 3rem;
+}
+
+.Überschrift {
+    text-decoration: underline;
+}
